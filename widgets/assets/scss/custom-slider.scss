@@ -1,0 +1,99 @@
+.custom-slider-wrapper {
+  height: 90vh;
+
+  .swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .elementor-divider-separator {
+      width: 50px;
+      border-top: 4px solid #2F5496;
+    }
+
+    .elementor-background-overlay {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: #000000;
+      opacity: 0.4;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 70%;
+
+      @media (max-width: 1023px) {
+        width: 85%;
+      }
+    }
+
+    h2 {
+      font-family: "Poppins", Sans-serif;
+      font-size: 4.4rem;
+      font-weight: 700;
+      line-height: 1.2em;
+      color: white;
+      margin-bottom: 20px;
+
+      @media (max-width: 1023px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      text-align: left;
+      color: white;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
+      font-weight: var(--e-global-typography-secondary-font-weight);
+      color: white;
+      background-color: var(--e-global-color-primary);
+      border-radius: 0px 0px 0px 0px;
+      font-size: 16px;
+      padding: 10px 45px;
+
+      &:hover {
+        color: #FFFFFF;
+        background-color: black;
+      }
+    }
+
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    @media (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+
+      &::after {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      right: 0;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 0;
+    }
+  }
+}
