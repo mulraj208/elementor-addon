@@ -2,7 +2,7 @@
   var swiper = new Swiper('.custom-slider-wrapper', {
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 8000,
     },
     navigation: {
       nextEl: '.swiper-button-next',
